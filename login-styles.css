@@ -1,0 +1,219 @@
+/* General Reset */
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: tilt wrap;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+*/
+/* Popup Overlay */
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.login-popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Popup Box */
+.login-box {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+  max-width: 800px;
+  height: 554.281px;
+  height: auto;
+  width: 90%;
+  border-radius: 20px;
+  background-color: #F1E4FF;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+  z-index: 1;
+  padding: 20px; 
+}
+
+/* Slide-In Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #8CBE2D; /* Green background */
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  color: #ffffff; /* White X */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 9999;
+}
+
+.close-btn:hover {
+  background-color: #76a920; /* Darker green for hover */
+}
+
+.close-btn:active {
+  transform: scale(0.9);
+}
+
+/* Mascot Image */
+.login-mascot {
+  flex: 1; 
+  max-width: 330px;
+  width: auto;
+  height: auto;
+  margin-right:-20px; 
+  z-index: 1;
+  order: 2; 
+}
+
+/* Star Image */
+.login-star {
+  width: 240px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 240px;
+  z-index: 1;
+}
+
+/* Title */
+
+.login-title {
+  font-size: 2rem; 
+  font-weight: 800; 
+  color: #5b2166;
+  margin: 0 auto; 
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+
+/* Form Styling */
+.login-form {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 20px 30px;
+  text-align: left; 
+  font-family: "Tilt Warp", sans-serif;
+}
+
+.form-group {
+  width: 100%;
+
+}
+
+.login-form label {
+  display: block;
+  font-weight: bold;
+  color: #5b2166;
+  margin-bottom: 5px;
+  margin-left:10px
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #d5c1d8;
+  border-radius: 20px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #b086d3;
+  box-shadow: 0 0 5px rgba(176, 134, 211, 0.5);
+}
+
+/* Buttons */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.login-btn {
+  font-family: "Tilt Warp", sans-serif; /* Updated font */
+  text-shadow: -1px -1px 0 #000, /* Top-left shadow */
+  1px -1px 0 #000,  /* Top-right shadow */
+ -1px  1px 0 #000,  /* Bottom-left shadow */
+  1px  1px 0 #000;  /* Bottom-right shadow */
+  padding: 15px 40px;
+  background-color: #87E432; 
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  cursor: pointer;
+  box-shadow:  -4px 5px #000000;
+  transition: box-shadow 0.3s ease, transform 0.2s ease; 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #76a920;
+  box-shadow:  -4px 5px #000000;
+}
+
+.login-btn:active {
+  transform: scale(0.95);
+  box-shadow:  -4px 5px #000000;
+}
+.login-btn a{
+  text-decoration: none;
+  color: white;
+}

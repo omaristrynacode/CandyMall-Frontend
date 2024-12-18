@@ -1,0 +1,170 @@
+{
+    "products": {
+      "candy": [
+        {
+          "id": 1,
+          "name": "bebeto watermelon",
+          "price": 5,
+          "picture": "assets/candy/bebeto_watermelon.png"
+        },
+        {
+          "id": 2,
+          "name": "bebeto",
+          "price": 4,
+          "picture": "assets/candy/bebeto.png"
+        },
+        {
+          "id": 3,
+          "name": "gummy bears",
+          "price": 6,
+          "picture": "assets/candy/gummy_bears.png"
+        }, {
+          "id": 4,
+          "name": "jolly rancher",
+          "price": 6,
+          "picture": "assets/candy/jolly_rancher.png"
+        }, {
+          "id": 6,
+          "name": "skittles",
+          "price": 6,
+          "picture": "assets/candy/skittles.png"
+        }, {
+          "id": 7,
+          "name": "wonka nerds",
+          "price": 6,
+          "picture": "assets/candy/wonka_nerds.png"
+        }
+      ],
+      "chocolate": [
+        {
+          "id": 6,
+          "name": "bueno",
+          "price": 2,
+          "picture": "assets/chocolate/bueno.png"
+        },
+        {
+          "id": 7,
+          "name": "ferero",
+          "price": 7,
+          "picture": "assets/chocolate/ferero.png"
+        },
+        {
+          "id": 8,
+          "name": "Kinder Chocolate",
+          "price": 3,
+          "picture": "assets/chocolate/kinder_Chocolate.png"
+        },   {
+          "id": 11,
+          "name": "loacker minis",
+          "price": 3,
+          "picture": "assets/chocolate/loacker_minis.png"
+        },  {
+          "id": 12,
+          "name": "M&M's",
+          "price": 3,
+          "picture": "assets/chocolate/M&M's.png"
+        },  {
+          "id": 13,
+          "name": "milka",
+          "price": 3,
+          "picture": "assets/chocolate/Milka.png"
+        },  {
+          "id": 16,
+          "name": "nutella",
+          "price": 3,
+          "picture": "assets/chocolate/nutella.png"
+        },  {
+          "id": 18,
+          "name": "Raffaello",
+          "price": 3,
+          "picture": "assets/chocolate/Raffaello.png"
+        },  {
+          "id": 19,
+          "name": "snickers_bites",
+          "price": 3,
+          "picture": "assets/chocolate/snickers_bites.png"
+        },  {
+          "id": 20,
+          "name": "Twix",
+          "price": 3,
+          "picture": "assets/chocolate/Twix.png"
+        }
+      ],
+      "cookies": [
+        {
+          "id": 21,
+          "name": "chips ahoy",
+          "price": 15.99,
+          "picture": "assets/cookies/chips_ahoy.png"
+        },
+        {
+          "id": 22,
+          "name": "chips delux",
+          "price": 13.99,
+          "picture": "assets/cookies/chips_delux.png"
+        },
+        {
+          "id": 23,
+          "name": "chocolate chip",
+          "price": 18.99,
+          "picture": "assets/cookies/chocolate_chip.png"
+        },
+        {
+          "id": 24,
+          "name": "famous amous",
+          "price": 14.99,
+          "picture": "assets/cookies/famous_amous.png"
+        },
+        {
+          "id": 25,
+          "name": "loacker",
+          "price": 14.99,
+          "picture": "assets/cookies/loacker_minis.png"
+        },
+        {
+          "id": 26,
+          "name": "Oreo Cookie",
+          "price": 14.99,
+          "picture": "assets/cookies/oreo_cookie.png"
+        },
+        {
+          "id": 27,
+          "name": "oreo",
+          "price": 14.99,
+          "picture": "assets/cookies/oreo.png"
+        }
+      ],
+      "teddy": [
+        {
+          "id": 46,
+          "name": "Stuffed Bear",
+          "price": 9.99,
+          "picture": "assets/toys/stuffed_bear.png"
+        }
+      ],
+      "box": [
+        {
+          "id": 50,
+          "name": "square box",
+          "price": 2,
+          "picture": "assets/box/square_box.png"
+        },{
+          "id": 51,
+          "name": "circle box",
+          "price": 3,
+          "picture": "assets/box/circle_box.png"
+        },{
+          "id": 52,
+          "name": "triangle box",
+          "price": 3,
+          "picture": "assets/box/triangle_box.png"
+        },{
+          "id": 53,
+          "name": "star box",
+          "price": 3,
+          "picture": "assets/box/star_box.png"
+        }
+      ]
+    }
+  }
+  

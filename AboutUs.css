@@ -1,0 +1,98 @@
+@import url("cart.css");
+@import url("styles.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+body {
+  font-family: "Tilt Warp", sans-serif;
+  background-color: #f1e4ff;
+  color: #4e0d66;
+  margin: 0;
+  padding: 0;
+  background-image: url("assets/background_stars.PNG");
+  background-position:center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.about-section {
+  margin: 120px;
+  margin-top: 200px;
+
+}
+#home, .logo a{
+  margin-left: 0px;
+}
+.section-title {
+  text-align: center;
+  color: #6a1b9a;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.content-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  max-width: 50%;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.text h1 {
+  margin-bottom: 20px;
+  color: #520D5E;
+}
+.text p{
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  font-family:"Poppins", sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+
+color: #520D5E;
+
+}
+
+.image {
+  max-width: 40%;
+  border: 38px solid #9747FF;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-wrapper.reverse {
+    flex-direction: column;
+  }
+
+  .text, .image {
+    max-width: 100%;
+  }
+
+  .image {
+    margin-bottom: 20px;
+  }
+}

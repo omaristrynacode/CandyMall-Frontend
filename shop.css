@@ -1,0 +1,553 @@
+* {
+
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #F1E4FF;
+}
+
+/* new header */
+
+
+  /* navbar */
+  
+  .navbar {
+    background-color: #9747ff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .special-logo {
+    position: absolute;
+    top: 50%; /* Position the logo halfway inside the navbar */
+    transform: translateY(-50%); /* Pull it up by half its height */
+    width: 100px; /* Adjust the size as necessary */
+    z-index: 1; /* Ensure it appears above other elements */
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul {
+    list-style-type: none;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    font-size: 10px;
+    margin: 0 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    position: relative;
+    overflow: visible;
+    margin-top: 20px;
+  }
+  
+  /* Navbar Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+  
+    z-index: 1;
+  }
+  
+  .nav-item {
+    margin: 0 20px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    margin-left: 130px;
+  }
+  
+  .nav-item a:hover {
+    color: #e1baff; /* Hover Effect */
+    text-decoration: underline;
+  }
+  
+  /* Special Logo Styling */
+  .logo {
+    position: relative;
+  }
+  
+  .special-logo {
+    position: absolute;
+    top: 50%; /* Position half inside and half outside the navbar */
+    transform: translateY(-50%);
+    width: 150px; /* Adjust the size as needed */
+    z-index: 2; /* Ensure it appears above the navbar */
+    filter: drop-shadow(
+      0px 4px 4px rgba(0, 0, 0, 0.25)
+    ); /* Add subtle shadow for emphasis */
+  }
+  
+  /* Icon Styles */
+  .icons img {
+    width: 25px;
+    height: 25px;
+  }
+  .nav-item.icons i {
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item.icons i:hover {
+    color: #ff6f61; /* Candy Mall theme color */
+  }
+  /* Hide Logo Image on Small Devices */
+  
+
+.menu-toggle{
+  display: none;
+}
+
+
+/* Large Screens (1250px and above) */
+@media screen and (min-width: 1800px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+}
+
+/* Medium Screens (1024px to 1250px) */
+@media screen and (max-width: 1660px) and (min-width: 1024px) {
+  .navbar {
+    width: 100%;
+  }
+  .price-container1{
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column; /* Stack the menu items vertically */
+    display: none; /* Initially hidden */
+    background-color: #9747ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show toggle button */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-item {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .special-logo {
+    display: none; /* Hide logo */
+  }
+}
+
+/* Small Screens (768px to 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack the menu items vertically */
+    display: none; /* Initially hidden */
+    background-color: #9747ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show toggle button */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .special-logo {
+    display: none; /* Hide logo */
+  }
+}
+
+/* Extra Small Screens (340px to 768px) */
+@media screen and (max-width: 768px) {
+  .special-logo {
+    display: none; /* Hide logo on small screens */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none; /* Initially hidden */
+    background-color: #9747ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+}
+
+
+/* Minimum Screens (340px to 480px) */
+@media screen and (max-width: 480px) {
+  .menu-toggle {
+    font-size: 20px; /* Smaller toggle button */
+    padding: 5px 10px;
+  }
+
+  .nav-links {
+    font-size: 12px;
+  }
+
+  .nav-item {
+    font-size: 12px;
+  }
+
+  .icons i {
+    font-size: 16px; /* Smaller icons */
+  }
+}
+
+
+.shop_body {
+    background-image: url('assets/shop_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    /* Sets the height to the full viewport height */
+}
+
+/*BUTTON */
+.btn {
+    text-decoration: none;
+    text-align: center;
+    transition: all .5s ease;
+    border: 1.9 solid black;
+
+}
+
+.btn--action {
+    display: block;
+    width: 133.96px;
+    height: 20px;
+    border-radius: 1.5rem;
+    background-color: #B6BBB1;
+    color: #000;
+    transition: all .5s ease 0s;
+    box-shadow: -4px 5px #000000;
+}
+
+.btn--action:active {
+    box-shadow: -4px 5px #000000;
+    transform: translateY(5px);
+}
+
+
+.white-box-heading {
+    font-weight: bold;
+    padding-bottom: 30.5px;
+    margin: 0;
+    font: 400 23px Vina Sans;
+    color: white;
+    letter-spacing: 1.11px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.7px;
+}
+
+.button-list{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 70px;
+    position: relative;
+    top:120px
+}
+/* .search{
+    height:40px;
+    width: 40%;
+    border-radius: 50px;
+    border: none;
+} */
+.search {
+    height:40px;
+    width: 20%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+.list_cards {
+    margin: 180px 200px;
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to move to the next line */
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+}
+
+.candy-product-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding-top: 25px;
+    border: 3px solid #a996c2;
+    border-radius: 30px;
+    width: 218px;
+    background: #d8b6ff;
+}
+.full-card{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px; /* Adjust to position the star */
+  right: 10px; /* Adjust to position the star */
+  width: 24px; /* Set the size of the star */
+  height: 24px;
+  cursor: pointer; /* Change cursor to pointer for clickable effect */
+  transition: fill 0.3s ease; /* Smooth color transition */
+  z-index: 20;
+}
+.search{
+display: none;  
+}
+
+
+.product-image-container {
+    display: block;
+    width: 162px;
+    height: 162px;
+    align-self: center;
+    object-fit: cover;
+}
+
+.mms-price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+    height: 97px;
+    padding: 0 18px 17.5px;
+    margin-top: -38px;
+    background: url("assets/white.png") 50% / cover no-repeat;
+}
+
+.candy-title-text-style {
+    font: 400 20px 'Vina Sans';
+    color: #520d5e;
+    letter-spacing: 1px;
+}
+
+.mm-price-label {
+    font: 400 20px 'Tilt Warp';
+    color: rgba(89, 47, 89, 0.5);
+    margin-top: 6.75px;
+    letter-spacing: 1px;
+}
+
+.quantity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 6px;
+  
+}
+
+.control-increment, .control-decrement {
+    background: #87e432;
+    padding: 5px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.control-decrement{
+    position: relative;
+    left: 10px;
+}
+
+.control-count {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.control-text {
+    font: 400 12px Tilt Warp;
+    color: #2a2b2e;
+}
+
+.add-to-cart-container {
+    margin-top: 10px;
+}
+
+.add-to-cart-button {
+    background: #87e432;
+
+    border: 1.5px solid #2f1344;
+    border-radius: 20.5px;
+    width: 80px;
+    cursor: pointer;
+    text-align: center;
+}
+.add-to-cart-title{
+    font: 400 14px Vina Sans;
+}
+
+/* For large tablets and small desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .button-list{
+        margin: 0px 50px;
+
+    }
+    .list_cards{
+        margin: 180px 100px
+    
+        }
+     
+}
+
+/* For tablets (max-width: 992px) */
+@media (max-width: 992px) {
+    .button-list{
+        margin: 0px 30px;
+
+    }
+    .list_cards{
+    margin: 180px 100px
+
+    }
+ 
+}
+
+/* For large mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .header {
+        font-size: 32px;
+    }
+    .list_cards {
+      
+        margin: 180px 100px
+    }
+   
+    .button-list {
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+   
+   
+    
+}

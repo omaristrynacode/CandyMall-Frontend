@@ -1,0 +1,18 @@
+[
+  {
+    "firstName": "trail",
+    "lastName": "Run",
+    "phone": "23 434 234",
+    "email": "trial@gmail.com",
+    "birthdate": "2006-12-01",
+    "password": "123456"
+  },
+  {
+    "firstName": "Test",
+    "lastName": "Run",
+    "phone": "23 453 423",
+    "email": "test@gmail.com",
+    "birthdate": "2006-11-30",
+    "password": "123456"
+  }
+]

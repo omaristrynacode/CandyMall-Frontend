@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vina+Sans:wght@400" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Warp:wght@400" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop.css">
+   
+
+    <title>Shop</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="AboutUs.html">About</a></li>
+          <li class="nav-item"><a href="#maincontainer">Play</a></li>
+          <li class="nav-item logo">
+            <a href="#">
+              <img src="assets/Logo.png" alt="Candy Mall Logo" class="logo-image special-logo">
+            </a>
+          </li>
+          <li class="nav-item"><a href="shop.html">Shop</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item icons">
+            <a href="userProfile.html"><img src="assets/sign1.png" alt="User Icon"></a>
+          </li>
+          <li class="nav-item icons">
+            <a href="cart.html"><img src="assets/cart1.png" alt="Cart Icon"></a>
+          </li>
+        </ul>
+      </nav>
+      
+      
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+  
+  
+  
+    <div class="shop_body">
+
+        <div class="button-list">
+            <button class="btn btn--action"
+                style="display: flex; justify-content: center; align-items: center; padding-top: 30px;">
+                <p class="white-box-heading">ALL</p>
+            </button>
+            <button class="btn btn--action"
+                style="display: flex; justify-content: center; align-items: center; padding-top: 30px;">
+                <p class="white-box-heading">CHOCOLATE</p>
+            </button> <button class="btn btn--action"
+                style="display: flex; justify-content: center; align-items: center; padding-top: 30px;">
+                <p class="white-box-heading">CANDY</p>
+            </button> <button class="btn btn--action"
+                style="display: flex; justify-content: center; align-items: center; padding-top: 30px;">
+                <p class="white-box-heading">Cookies</p>
+            </button> 
+            <button class="btn btn--action"
+                style="display: flex; justify-content: center; align-items: center; padding-top: 30px;">
+                <p class="white-box-heading">Pastes</p>
+            </button> 
+        
+            <input type="text" class="search">
+        </div>
+
+        <div class="list_cards">
+            
+
+<!-- i want here the last of cards to be -->
+
+
+        </div>
+    </div>
+   
+
+    
+    <!-- For the Java script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery library -->
+    <script src="shopscript.js"></script> <!-- Your custom script -->
+</body>
+
+</html>

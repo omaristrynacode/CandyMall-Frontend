@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candy Mall</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon">
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp:wght@400"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Vina+Sans:wght@400"
+    />
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="registration.css" />
+    <link rel="stylesheet" href="login-styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="AboutUs.html">About</a></li>
+        <li class="nav-item"><a href="#maincontainer">Play</a></li>
+        <li class="nav-item logo">
+          <a href="#">
+            <img
+              src="assets/Logo.png"
+              alt="Candy Mall Logo"
+              class="logo-image special-logo"
+            />
+          </a>
+        </li>
+        <li class="nav-item"><a href="shop.html">Shop</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+        <li class="nav-item icons">
+          <a href="#" id="openPopupButton"
+            ><img src="assets/sign1.png" alt="User Icon"
+          /></a>
+        </li>
+        <li class="nav-item icons">
+          <a href="cart.html"><img src="assets/cart1.png" alt="Cart Icon" /></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Signup popup -->
+    <div class="popup-overlay" id="popup" style="display: none">
+      <div class="popup-box">
+        <button class="close-btn" id="closePopup">&times;</button>
+        <!-- First Section -->
+        <div class="popup-part-1">
+          <h2>Create Account</h2>
+          <p>Become part of the family</p>
+          <form id="createAccountForm" class="form-container">
+            <img
+              src="assets/crown-mascot/crown-mascot.png"
+              alt="Crown Mascot"
+              class="crown-mascot"
+            />
+            <div class="form-row">
+              <input
+                type="text"
+                id="firstName"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="text"
+                id="phone"
+                placeholder="Phone"
+                title="Enter a phone number"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                pattern="\S+@\S+\.\S+"
+                title="Enter a valid email address"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <input
+                type="date"
+                id="birthdate"
+                placeholder="Birthdate"
+                max="2011-01-01"
+                title="You must be at least 13 years old"
+                required
+              />
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                minlength="6"
+                title="Password must be at least 6 characters"
+                required
+              />
+            </div>
+            <div class="full-width checkbox-container">
+              <input type="checkbox" id="terms" required />
+              <label for="terms" class="terms">
+                I have read and accepted the
+                <a href="#">General Terms and Conditions</a> of this website.
+              </label>
+            </div>
+            <div class="signup-row">
+              <div class="signup-actions">
+                <button type="submit" class="signup-btn">Sign Up</button>
+                <div class="social-login">
+                  <img
+                    src="assets/social-media-logos/google-logo.png"
+                    alt="Google"
+                  />
+                  <img
+                    src="assets/social-media-logos/apple-logo.png"
+                    alt="Apple"
+                  />
+                  <img
+                    src="assets/social-media-logos/facebook-logo.png"
+                    alt="Facebook"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="popup-part-2">
+          <p class="footer-link">
+            Have an account already?
+            <a href="#" id="openLoginPopup" class="go-to-login">Log in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Log In Popup -->
+    <div class="login-popup" id="loginPopup">
+      <div class="login-box">
+        <!--Star Image-->
+        <img
+          src="assets/login/Star 3.png"
+          alt="Crown Mascot"
+          class="login-star"
+        />
+        <!-- Close Button -->
+        <button id="closeLoginPopup" class="close-btn">&times;</button>
+
+        <!-- Mascot Image -->
+        <img
+          src="assets/login/dabdob-05 1.png"
+          alt="Crown Mascot"
+          class="login-mascot"
+        />
+        <!-- Login Form -->
+
+        <form id="loginForm" class="login-form">
+          <h2 class="login-title">Log In</h2>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="" required />
+          </div>
+          <div class="button-row">
+            <button type="submit" class="login-btn">Log In</button>
+            <button class="login-btn" id="openSignupFromLogin">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+
+    <section class="main-banner">
+      <div class="content"></div>
+    </section>
+
+    <div class="candy-brands">
+      <marquee behavior="scroll" direction="left" scrollamount="30">
+        M&M'S • SNICKERS • SKITTLES • HERSHEYS • BOUNTY • M&M'S • SNICKERS •
+        SKITTLES • HERSHEYS • BOUNTY M&M'S • SNICKERS • SKITTLES • HERSHEYS •
+        BOUNTY • M&M'S • SNICKERS • SKITTLES • HERSHEYS • BOUNTY M&M'S •
+        SNICKERS • SKITTLES • HERSHEYS • BOUNTY • M&M'S • SNICKERS • SKITTLES •
+        HERSHEYS • BOUNTY • M&M'S • SNICKERS • SKITTLES • HERSHEYS • BOUNTY •
+        M&M'S • SNICKERS • SKITTLES • HERSHEYS • BOUNTY
+      </marquee>
+    </div>
+
+    <div class="carousel-container">
+      <h1 class="title">
+        Best Selling Products</h1>
+      <div class="carousel">
+        <button class="carousel-button prev">
+          <i class="bx bx-left-arrow-alt"></i>
+        </button>
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+          
+            <li class="carousel-slide" data-name="Jolly Rancher" data-cbd="20" data-oz="10" data-ml="295">
+              <img src="assets/candy/jolly_rancher.png" alt="Jolly Rancher" class="carousel-image" />
+            </li>
+            <li class="carousel-slide" data-name="M&M's" data-cbd="30" data-oz="15" data-ml="450">
+              <img src="assets/chocolate/M&M's.png" alt="M&M's" class="carousel-image" />
+            </li>
+            <li class="carousel-slide" data-name="Bueno Chocolate" data-cbd="18" data-oz="8" data-ml="240">
+              <img src="assets/chocolate/bueno.png" alt="Bueno Chocolate" class="carousel-image" />
+            </li>
+            <li class="carousel-slide" data-name="Milka Chocolate" data-cbd="22" data-oz="11" data-ml="330">
+              <img src="assets/chocolate/Milka.png" alt="Milka Chocolate" class="carousel-image" />
+            </li>  
+            <li class="carousel-slide active" data-name="Fruits Skittles" data-cbd="25" data-oz="12" data-ml="355">
+              <img src="assets/skittles.png" alt="Fruits Skittles" class="carousel-image" />
+            </li>
+            <li class="carousel-slide" data-name="Twix Bar" data-cbd="28" data-oz="14" data-ml="420">
+              <img src="assets/chocolate/Twix.png" alt="Twix Bar" class="carousel-image" />
+            </li>
+            <li class="carousel-slide" data-name="Bebeto Candy" data-cbd="15" data-oz="7" data-ml="210">
+              <img src="assets/candy/bebeto.png" alt="Bebeto Candy" class="carousel-image" />
+            </li>
+            <li class="carousel-slide" data-name="Gummy Bears" data-cbd="12" data-oz="6" data-ml="180">
+              <img src="assets/candy/gummy_bears.png" alt="Gummy Bears" class="carousel-image" />
+            </li>
+          </ul>
+        <!-- <img src="assets/star.png" class="active-star" alt=""> -->
+        </div>
+        <button class="carousel-button next">
+          <i class="bx bx-right-arrow-alt"></i>
+        </button>
+      </div>
+      <div class="product-details">
+        <h1>Fruits Skittles</h1>
+        <p>
+          <span id="mg">25</span> mg <br />
+          <span id="oz">12</span> FL OZ (<span id="ml">355</span> ML)
+        </p>
+        <div class="product-quantity">
+          <div class="quantity">
+            <button class="quantity-btn decrement">-</button>
+            <span class="quantity-value">1</span>
+            <button class="quantity-btn increment">+</button>
+          </div>
+          <button class="add-to-cart">Add</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="shop-by-brand">
+      <div class="blank"></div>
+      <h1 class="title">Shop By Brand</h1>
+
+      <div class="brand-slider">
+        <button class="nav-btn left-btn">
+          <i class="bx bx-left-arrow-alt"></i>
+        </button>
+        <div class="brands-container">
+          <div class="brand-logo"><img src="assets/mm.png" alt="M&M's" /></div>
+          <div class="brand-logo"><img src="assets/mm.png" alt="M&M's" /></div>
+          <div class="brand-logo"><img src="assets/mm.png" alt="M&M's" /></div>
+          <div class="brand-logo">
+            <img src="assets/milka.png" alt="Milka" />
+          </div>
+          <div class="brand-logo">
+            <img src="assets/Loacker.png" alt="Loacker" />
+          </div>
+          <div class="brand-logo" id="reeses">
+            <img src="assets/reeses.jpeg" alt="Reese's" />
+          </div>
+          <div class="brand-logo" id="oreo">
+            <img src="assets/oreo.jpeg" alt="Oreo" />
+          </div>
+          <div class="brand-logo" id="kinder">
+            <img src="assets/kinder.jpeg" alt="Oreo" />
+          </div>
+          <div class="brand-logo" id="sour">
+            <img src="assets/sourpatch.png" alt="Oreo" />
+          </div>
+          <div class="brand-logo" id="chupa">
+            <img src="assets/chupa.png" alt="Oreo" />
+          </div>
+        </div>
+        <button class="nav-btn right-btn">
+          <i class="bx bx-right-arrow-alt"></i>
+        </button>
+      </div>
+
+      <!-- <button class="add-btn">Add</button> -->
+    </div>
+
+    <!-- mnwar section -->
+
+    <div class="Gifting Section">
+      <!--pop up message-->
+      <div id="popup-message" class="popup-message">
+        <p id="popup-text"></p>
+      </div>
+      <!-- For Title -->
+      <div class="gift-title-container">
+        <h2 class="gift-title-Section">Gifting</h2>
+        <p>
+          Gift your loved ones an unforgettable gift, customised by you from A
+          to Z!
+        </p>
+      </div>
+      <!-- For Category Buttons -->
+      <div class="gift-button-list">
+        <button
+          class="btn btn--action"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+          "
+        >
+          <p class="white-box-heading-g">Box</p>
+        </button>
+
+        <button
+          class="btn btn--action"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+          "
+        >
+          <p class="white-box-heading-g">CHOCOLATE</p>
+        </button>
+
+        <button
+          class="btn btn--action"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+          "
+        >
+          <p class="white-box-heading-g">CANDY</p>
+        </button>
+
+        <button
+          class="btn btn--action"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+          "
+        >
+          <p class="white-box-heading-g">TEDDY</p>
+        </button>
+      </div>
+
+      <!--body list -->
+      <div class="gift-body-list">
+        <div class="product-card-view">
+          <p class="purple-heading">Items</p>
+          <div class="pricing-container">
+            <div class="star-navigation">
+              <div id="prev-item" class="navigation-button"></div>
+              <div class="star-container">
+                <img
+                  src=""
+                  class="image-container1-g"
+                  id="product-image"
+                  alt="Product Image"
+                />
+                <img
+                  src="assets/star.png"
+                  class="image-container-g star-image"
+                />
+              </div>
+              <div id="next-item" class="navigation-button"></div>
+            </div>
+            <div class="button-counter">
+              <p class="price-tag-text">0 $</p>
+              <div class="cart-summary-container" style="margin-bottom: 10px">
+                <p class="warp-text-css">0/5</p>
+                <!-- here should be updated based the size of the box-->
+              </div>
+              <div class="button-add-container" style="margin-top: -61px">
+                <button
+                  class="btn-add btn-add--action"
+                  id="add_product_button"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 25px;
+                  "
+                >
+                  <p class="white-box-heading-g">ADD</p>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sizes-container-list">
+            <div class="sizes-container">
+              <div class="purple-box-g active" data-max="5"></div>
+              <p class="small-text-styler">small</p>
+            </div>
+            <div class="sizes-container">
+              <div class="purple-box-g" data-max="10"></div>
+              <p class="small-text-styler">Medium</p>
+            </div>
+            <div class="sizes-container">
+              <div class="purple-box-g" data-max="15"></div>
+              <p class="small-text-styler">Large</p>
+            </div>
+          </div>
+        </div>
+        <div class="gift-box-section">
+          <p class="purple-heading">Your Design</p>
+
+          <div class="inside-box" style="z-index: 0px">
+            <div class="images"></div>
+            <!-- here where the items will be added as z-index: 1-->
+            <img
+              src="assets/outside-box.png"
+              style="z-index: 2"
+              class="outside-box"
+            />
+          </div>
+
+          <div class="custom-letter-container">
+            <div class="custom-letter-container3" id="openPopupButton">
+              <p class="custom-letter-title">Custom letter</p>
+            </div>
+            <div id="popup" class="popup">
+              <div class="popup-content">
+                <span class="close" id="closePopupButton">&times;</span>
+                <textarea
+                  class="letter-text"
+                  placeholder="Let them know you love them"
+                  rows="4"
+                ></textarea>
+                <div class="button-add-container">
+                  <button
+                    class="btn-add btn-add--action"
+                    id="submit-product-button"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      padding-top: 30px;
+                      background-color: #9747ff;
+                    "
+                  >
+                    <p class="white-box-heading-g" style="font-size: 24px">
+                      SUBMIT
+                    </p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p
+              class="total-price-text1"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              TOTAL PRICE:
+              <span class="price-tag-text" id="total-price-text"> 0 $ </span>
+            </p>
+
+            <div class="button-add-container">
+              <button
+                id="add-to-cart-btn"
+                class="btn-add btn-add--action"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding-top: 30px;
+                  width: 140px;
+                "
+              >
+                <p class="white-box-heading-g">ADD TO CART</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="candy-brands-s">
+      <div class="scrolling-text">
+        <span
+          >CHRISTMAS EDITION <br />
+          Benefit from 20% Discount on all Items
+        </span>
+        <span
+          >CHRISTMAS EDITION <br />
+          Benefit from 20% Discount on all Items
+        </span>
+        <span
+          >CHRISTMAS EDITION <br />
+          Benefit from 20% Discount on all Items
+        </span>
+        <span
+          >CHRISTMAS EDITION <br />
+          Benefit from 20% Discount on all Items
+        </span>
+        <span
+          >CHRISTMAS EDITION <br />
+          Benefit from 20% Discount on all Items
+        </span>
+        <span
+          >CHRISTMAS EDITION <br />
+          Benefit from 20% Discount on all Items
+        </span>
+        <span
+          >CHRISTMAS EDITION <br />
+          Benefit from 20% Discount on all Items
+        </span>
+        <span
+          >CHRISTMAS EDITION <br />
+          Benefit from 20% Discount on all Items
+        </span>
+      </div>
+    </div>
+
+    <div class="heading_ed">
+      <h1 class="title">Play & Win</h1>
+      <p>Play our Candy Jackpot and Win, check your count in your profile!</p>
+    </div>
+
+    <div class="desktop-layout">
+      <div
+        id="maincontainer"
+        style="background: #f1e4ff"
+        data-ignore="used only for top most containter width"
+      >
+        <div class="central-content-container">
+          <div class="hierarchical-container">
+            <div class="vertical-flex-container">
+              <div class="vertical-centered-image-container">
+                <div>
+                  <!--   
+                    <div class="image-container-row">
+                      <img src="assets/image_291c9016.png"
+                        class="image-container5" />
+                      <img src="assets/image_36510113.png"
+                        class="image-container-with-margin" />
+                    </div> -->
+                  <!-- edit image -->
+                  <div class="horizontal-box-with-negative-margin">
+                    <div class="purple-box-with-text">
+                      <img
+                        src="assets/Group 808.png"
+                        class="image-container5"
+                      />
+
+                      <div class="header-card">
+                        <div class="fullwidth-container"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="radiant-container">
+                <div class="points-display">
+                  <span id="points-value">0</span> POINTS
+                </div>
+                <div class="mystique-container">
+                  <img
+                    src="assets/image_d18fffa9.png"
+                    class="image-container-with-nested-images"
+                  />
+                  <div class="cosmic-container">
+                    <div class="vertical-layout-container1">
+                      <div class="card-container-with-images1">
+                        <img
+                          id="slot1"
+                          src="assets/image_b72a206d.png"
+                          class="image-container1"
+                        />
+                        <div class="nested-image-container">
+                          <!-- <img src="assets/image_d18fffa9.png" class="image-container4" /> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vertical-layout-container1">
+                      <div class="card-container-with-images1">
+                        <img
+                          id="slot2"
+                          src="assets/image_b72a206d.png"
+                          class="image-container1"
+                        />
+                        <div class="nested-image-container">
+                          <!-- <img src="assets/image_d18fffa9.png" class="image-container4" /> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vertical-layout-container1">
+                      <div class="card-container-with-images1">
+                        <img
+                          id="slot3"
+                          src="assets/image_b72a206d.png"
+                          class="image-container1"
+                        />
+                        <div class="nested-image-container">
+                          <!-- <img src="assets/image_d18fffa9.png" class="image-container4" /> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <button class="play-button" onclick="playGame()">Play
+                    Now</button> -->
+
+                <button class="nested-content-container1 play-button">
+                  <div class="nested-content-container">
+                    <div class="colorful-box-container">
+                      <p class="white-box-heading">play Now</p>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="vertical-spacing-container">
+              <div class="purple-shadowed-column"></div>
+            </div>
+            <div class="vertical-layout-container">
+              <div class="vertical-centered-image-container">
+                <div class="vertical-image-container">
+                  <img
+                    src="assets/image_96f11b42.png"
+                    class="image-container2"
+                  />
+                  <div class="purple-box"></div>
+                </div>
+              </div>
+              <div class="purple-box-with-image"></div>
+            </div>
+          </div>
+        </div>
+        <div class="imag_ed">
+          <img src="assets/nour2.png" alt />
+        </div>
+      </div>
+    </div>
+
+    <div class="mnwar">
+      <!-- Mobile Layout (Visible only on mobile screens) -->
+      <div class="mobile-layout">
+        <!-- <header>
+          <h1>Slot Machine</h1>
+        </header> -->
+
+        <!-- Points Display -->
+        <!-- Shared Points Display -->
+        <div class="points-display points-display-mobile">
+          <span id="points-value">0</span> Pts
+        </div>
+
+        <!-- Reels container with default src images -->
+        <div class="reels-container">
+          <img
+            id="slot1-mobile"
+            src="assets/image_b72a206d.png"
+            class="reel-image"
+          />
+          <img
+            id="slot2-mobile"
+            src="assets/image_b72a206d.png"
+            class="reel-image"
+          />
+          <img
+            id="slot3-mobile"
+            src="assets/image_b72a206d.png"
+            class="reel-image"
+          />
+        </div>
+
+        <!-- Play Button for Mobile -->
+        <button class="play-button-mobile" onclick="playGameMobile()">
+          Play Now
+        </button>
+      </div>
+    </div>
+
+    <!-- fawzi part -->
+
+    <div class="review-section">
+      <div class="gift-title-container">
+        <h1 class="title">Customer Reveiws</h1>
+      </div>
+      <div class="review-container">
+        <!-- Review Card 1 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              Candymall is my new go-to for nostalgic treats! I loved their
+              variety. It's hard to find some of these sweets anywhere else
+              nowadays.
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Kanye</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+        <!-- Repeat similar structure for other review cards -->
+
+        <!-- Review Card 2 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              Great variety of fresh, delicious candies! The staff is super
+              friendly, and the chocolates are simply irresistible.
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Drake</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+        <!-- Review Card 3 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              The website was easy to navigate, and I was able to find some
+              unique international chocolates that I hadn't seen since my last
+              trip abroad.
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Juice Wrld</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 4 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              I was able to find candies from my childhood that I haven't seen
+              in years. It's like stepping back in time!
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Emily</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 5 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              The selection is amazing, and they have candies from all over the
+              world. I loved the experience!
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Sarah</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 6 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              So many unique candies I haven't seen anywhere else! The packaging
+              was adorable and the service was great.
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Michael</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 7 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              The candy was fresh and delicious. My kids absolutely loved the
+              variety of gummies and chocolates.
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Laura</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 8 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              Perfect for gift shopping! I found candies here that made
+              wonderful holiday presents for my family.
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Tom</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 9 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              Candymall has all my favorite candies from childhood. The service
+              is great, and the packaging is adorable!
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Chris</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 10 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              The chocolate selection is amazing! I found rare chocolates from
+              abroad, which made me so happy.
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Samantha</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 11 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              The variety of gummies and sour candies is fantastic! My kids
+              loved every bite.
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Alex</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 12 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              Amazing customer service, and the candies bring back so many fond
+              memories!
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- James</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Review Card 13 -->
+        <div class="review-card">
+          <div class="quote">“</div>
+          <div class="review-content">
+            <p>
+              The candy assortment is unique and high quality. Will definitely
+              shop here again!
+            </p>
+          </div>
+          <div class="author-container">
+            <span class="author">- Bella</span>
+          </div>
+          <div class="rating">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+        </div>
+
+        <!-- Additional review cards go here in the same format -->
+      </div>
+    </div>
+
+    <div class="page-container">
+      <!-- Main Content -->
+      <main class="content">
+        <!-- Content goes here -->
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer-logo">
+          <img src="assets/logo/Logo.png" alt="Candy Mall Logo" class="logo" />
+          <p>
+            Candy Mall is your destination for a delightful variety of candies,
+            chocolates, and sweet treats.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Categories</h3>
+            <ul>
+              <li>Chocolates</li>
+              <li>Sweets</li>
+              <li>Candies</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>About Us</li>
+              <li>Register</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+              <li>Saida, Lebanon</li>
+              <li>71355188</li>
+              <li>candymall@info.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy;2024, CandyMall.com</p>
+        </div>
+      </footer>
+    </div>
+    <script src="registeration.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

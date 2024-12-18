@@ -1,0 +1,829 @@
+
+
+  /* navbar */
+  
+  .navbar {
+    background-color: #9747ff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .special-logo {
+    position: absolute;
+    top: 50%; /* Position the logo halfway inside the navbar */
+    transform: translateY(-50%); /* Pull it up by half its height */
+    width: 100px; /* Adjust the size as necessary */
+    z-index: 1; /* Ensure it appears above other elements */
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul {
+    list-style-type: none;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    font-size: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    position: relative;
+    overflow: visible;
+    margin-top: 20px;
+  }
+  
+  /* Navbar Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+  
+    z-index: 1;
+  }
+  
+  .nav-item {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    margin-left: 80px;
+  }
+  
+  .nav-item a:hover {
+    color: #e1baff; /* Hover Effect */
+    text-decoration: underline;
+  }
+  
+  /* Special Logo Styling */
+  .logo {
+    position: relative;
+  }
+  .logo a {
+  margin-right: 150px;
+  }
+  
+  
+  .special-logo {
+    position: absolute;
+    top: 50%; /* Position half inside and half outside the navbar */
+    transform: translateY(-50%);
+    width: 150px; /* Adjust the size as needed */
+    z-index: 2; /* Ensure it appears above the navbar */
+    filter: drop-shadow(
+      0px 4px 4px rgba(0, 0, 0, 0.25)
+    ); /* Add subtle shadow for emphasis */
+  }
+  
+  /* Icon Styles */
+  .icons img {
+    width: 25px;
+    height: 25px;
+  }
+  .nav-item.icons i {
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item.icons i:hover {
+    color: #ff6f61; /* Candy Mall theme color */
+  }
+  /* Hide Logo Image on Small Devices */
+  
+  
+  
+  
+  
+  
+  
+  .menu-toggle{
+    display: none;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F1E4FF;
+    color: #4a4a4a;
+    background-image: url('assets/back1.png');
+    background-size:cover; /* Ensures the image covers the entire background */
+    background-repeat:repeat; /* Prevents the image from repeating */
+}
+
+  .container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 19%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 150px;
+  }
+  
+  .sidebar h2 {
+    font-size: 20px;
+    color: #520D5E;
+    margin-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid #E8D4FF;
+    margin-bottom: 15px;
+    width: 80%;
+  }
+  
+  .sidebar ul {
+    border-top: 1px solid #E8D4FF;
+    width: 80%;
+
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    font-size: 18px;
+    padding: 10px 0;
+    font-family: "Poppins", sans-serif;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #9747FF;
+  }
+  
+  .sidebar ul li.active {
+    font-weight: bolder;
+    color: #9747FF;
+  }
+  
+  .sidebar a.back-link {
+    text-decoration: none;
+    color: #520D5E;
+    font-size: 12px;
+    position: relative;
+    top: 280px;
+  }
+  
+  .profile-section {
+    width: 65%;
+    padding: 50px;
+    background-color: #E8D4FF;
+    margin-right: 50px;
+    border-radius: 50px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .profile-info h3 {
+    font-size: 20px;
+    color: #9747FF;
+  }
+  
+  .profile-info p {
+    font-size: 16px;
+    color: #9747FF;
+  }
+  
+  .profile-form {
+
+
+    width: 100%;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 35px;
+  }
+  /* ssss */
+  .form-row input {
+    width: 50%;
+    padding: 13px;
+    border: none;
+    border-radius: 30px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    color: #592f598a;
+    font-weight: bold;
+    background-color: #F1E4FF;
+  }
+  .form-row input::placeholder {
+    color: #592f5976; /* Change this to your desired placeholder color */
+    font-weight:bolder; /* Optional: Adjust the font weight */
+    opacity: 1; /* Ensures the placeholder color is fully opaque */
+}
+
+
+.btnd{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+  .save-button {
+    background-color: #87E432;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border: none;
+    font-family: "Tilt Warp", sans-serif; /* Updated font */
+    width: 17%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-shadow: -1px -1px 0 #000, /* Top-left shadow */
+    1px -1px 0 #000,  /* Top-right shadow */
+   -1px  1px 0 #000,  /* Bottom-left shadow */
+    1px  1px 0 #000;  /* Bottom-right shadow */
+    box-shadow: 0px 10px 1px rgb(0, 0, 0); /* Creates the shadow under the button */
+
+    transition: all 0.3s ease; /* Smooth effect when hovered */
+  }
+  .save-button:hover {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7); /* Slightly larger shadow on hover */
+    transform: translateY(-2px); /* Makes the button pop upward slightly */
+}
+
+  
+
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+
+.favorites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.headimg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 10px;
+  bottom: 50px;
+}
+
+.headimg img{
+  width: 18%;
+}
+
+
+
+.candy-product-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: 10px;
+  border: 3px solid #a996c2;
+  border-radius: 30px;
+  width: 218px;
+  background:#D8B6FF;
+}
+.product-image-container {
+  display: block;
+  width: 162px;
+  height: 162px;
+  align-self: center;
+  object-fit:cover;
+}
+.mms-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  height: 96px;
+  padding: 0 18px 17.5px;
+  margin-top: -55px;
+  background: url("assets/white.png") 50% / cover no-repeat;
+}
+.candy-title-text-style {
+  font: 400 20px 'Vina Sans';
+  color: #520d5e;
+  letter-spacing:1px;
+}
+.mm-price-label {
+  font: 400 20px 'Tilt Warp';
+  color: rgba(89, 47, 89, 0.5);
+  margin-top: 6.75px;
+  letter-spacing:1px;
+}
+.candy-product-card img{
+  width: auto;
+}
+
+
+
+
+
+
+
+
+.divhe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1E4FF;
+  height: 14px;
+  width: 35%;
+  position: relative;
+  left: 300px;
+  margin-bottom: 20px;
+}
+
+.points-header {
+ 
+  font-size: 32px;
+  color: #9747FF;
+  text-align: center;
+  margin: 30px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+  overflow: visible;
+}
+
+.user-points-display {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #D8B6FF;
+  padding: 5px;
+  margin-bottom: 30px;
+  background-color: #F1E4FF;
+  width: 200px;
+  border-radius: 20px;
+  margin: 0 auto 40px auto;
+}
+.reh2{
+  color: #9747FF;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+
+}
+.rewards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.reward {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #D8B6FF;
+}
+
+.reward p {
+  flex: 1;
+  margin: 0;
+  padding: 0 10px;
+  font-family: "Poppins", sans-serif;
+  color: #2F1344;
+  font-size: 20px;
+}
+
+.reward-points {
+  font-weight: bold;
+  text-align: right;
+  font-size: 14px;
+  color: #2F1344;
+
+}
+
+.circle {
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  background-color: #9747FF;
+}
+
+
+
+
+
+
+
+
+/* Media Queries for Responsive Design */
+
+/* For devices with a maximum width of 1024px (iPads and tablets) */
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .sidebar h2 {
+    display: none; /* Hide the header on smaller screens */
+  }
+
+  .sidebar ul {
+    width: auto;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .sidebar ul li {
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .profile-section {
+    width: 90%;
+    padding: 20px;
+    margin-right: 0;
+    border-radius: 20px;
+  }
+
+  .profile-photo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+
+  .favorites {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+
+  .user-points-display {
+    width: 150px;
+  }
+
+  .reward {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reward-points {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+/* For devices with a maximum width of 768px (smaller tablets and phones) */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .special-logo {
+    width: 80px;
+  }
+
+  .profile-photo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .points-header {
+    font-size: 24px;
+  }
+
+  .user-points-display {
+    font-size: 16px;
+    width: 120px;
+  }
+
+  .favorites {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+
+  .reward {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .reward-points {
+    font-size: 14px;
+  }
+}
+
+/* For devices with a maximum width of 480px (small phones) */
+@media screen and (max-width: 480px) {
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .sidebar ul {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .profile-section {
+    padding: 10px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-photo {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+  }
+
+  .profile-info h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .profile-info p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-row input {
+    width: 100%;
+  }
+
+  .save-button {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .headimg img {
+    width: 80%;
+  }
+
+  .favorites {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .candy-product-card {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .points-header {
+    font-size: 20px;
+  }
+
+  .user-points-display {
+    font-size: 14px;
+    width: 100px;
+  }
+
+  .rewards-section {
+    gap: 10px;
+  }
+
+  .reward {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reward p {
+    text-align: center;
+  }
+
+  .circle {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* For devices with a maximum width of 320px (very small phones) */
+@media screen and (max-width: 320px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-section {
+    padding: 5px;
+  }
+
+  .profile-photo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-info h3 {
+    font-size: 16px;
+  }
+
+  .profile-info p {
+    font-size: 12px;
+  }
+
+  .form-row input {
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .save-button {
+    width: 60%;
+    font-size: 8px;
+  }
+
+  .favorites {
+    gap: 5px;
+  }
+
+  .candy-product-card {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .user-points-display {
+    font-size: 12px;
+    width: 80px;
+  }
+
+  .rewards-section {
+    gap: 5px;
+  }
+
+  .reward {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .reward-points {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1400px)  {
+  .navbar {
+    width: 100%;
+  }
+  .price-container1{
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column; /* Stack the menu items vertically */
+    display: none; /* Initially hidden */
+    background-color: #9747ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+.divhe{
+left: 0;
+
+
+}
+.sidebar a.back-link{
+  display: none;
+}
+  .menu-toggle {
+    display: block; /* Show toggle button */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-item {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .special-logo {
+    display: none; /* Hide logo */
+  }
+}

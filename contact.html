@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vina+Sans:wght@400" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tilt+Warp:wght@400" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>contact</title>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="AboutUs.html">About</a></li>
+          <li class="nav-item"><a href="#maincontainer">Play</a></li>
+          <li class="nav-item logo">
+            <a href="#">
+              <img src="assets/Logo.png" alt="Candy Mall Logo" class="logo-image special-logo">
+            </a>
+          </li>
+          <li class="nav-item"><a href="shop.html">Shop</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item icons">
+            <a href="userProfile.html"><img src="assets/sign1.png" alt="User Icon"></a>
+          </li>
+          <li class="nav-item icons">
+            <a href="cart.html"><img src="assets/cart1.png" alt="Cart Icon"></a>
+          </li>
+        </ul>
+      </nav>
+      
+      
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+
+<div class="contact">
+
+     
+    <div class="contact_details">
+ 
+           <h2>Contact Us</h2> 
+
+            <input type="text" placeholder="name" class="name_email">
+            <input type="text" placeholder="email" class="name_email">
+            <textarea name="yourthoughts" id="yourthoughts" class="yourthoughts" placeholder="yourthoughts"></textarea>
+
+
+            
+            <button class="btn btn--action"
+            style="display: flex; justify-content: center; align-items: center; padding-top: 30px;">
+            <p class="white-box-heading">Submit</p>
+            </button>
+    </div>
+
+    <div class="image">
+        <img src="assets/contact.png" alt="" class="src">
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

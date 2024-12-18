@@ -1,0 +1,465 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('assets/shop_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+/* new header */
+
+
+  /* navbar */
+  
+  .navbar {
+    background-color: #9747ff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .special-logo {
+    position: absolute;
+    top: 50%; /* Position the logo halfway inside the navbar */
+    transform: translateY(-50%); /* Pull it up by half its height */
+    width: 100px; /* Adjust the size as necessary */
+    z-index: 1; /* Ensure it appears above other elements */
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul {
+    list-style-type: none;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    font-size: 10px;
+    margin: 0 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    position: relative;
+    overflow: visible;
+    margin-top: 20px;
+  }
+  
+  /* Navbar Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+  
+    z-index: 1;
+  }
+  
+  .nav-item {
+    margin: 0 20px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+    margin-left: 130px;
+  }
+  
+  .nav-item a:hover {
+    color: #e1baff; /* Hover Effect */
+    text-decoration: underline;
+  }
+  
+  /* Special Logo Styling */
+  .logo {
+    position: relative;
+  }
+  
+  .special-logo {
+    position: absolute;
+    top: 50%; /* Position half inside and half outside the navbar */
+    transform: translateY(-50%);
+    width: 150px; /* Adjust the size as needed */
+    z-index: 2; /* Ensure it appears above the navbar */
+    filter: drop-shadow(
+      0px 4px 4px rgba(0, 0, 0, 0.25)
+    ); /* Add subtle shadow for emphasis */
+  }
+  
+  /* Icon Styles */
+  .icons img {
+    width: 25px;
+    height: 25px;
+  }
+  .nav-item.icons i {
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item.icons i:hover {
+    color: #ff6f61; /* Candy Mall theme color */
+  }
+  /* Hide Logo Image on Small Devices */
+  
+
+.menu-toggle{
+  display: none;
+}
+
+
+/* Large Screens (1250px and above) */
+@media screen and (min-width: 1800px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+}
+
+/* Medium Screens (1024px to 1250px) */
+@media screen and (max-width: 1660px) and (min-width: 1024px) {
+  .navbar {
+    width: 100%;
+  }
+  .price-container1{
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column; /* Stack the menu items vertically */
+    display: none; /* Initially hidden */
+    background-color: #9747ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show toggle button */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-item {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .special-logo {
+    display: none; /* Hide logo */
+  }
+}
+
+/* Small Screens (768px to 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack the menu items vertically */
+    display: none; /* Initially hidden */
+    background-color: #9747ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show toggle button */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .special-logo {
+    display: none; /* Hide logo */
+  }
+}
+
+/* Extra Small Screens (340px to 768px) */
+@media screen and (max-width: 768px) {
+  .special-logo {
+    display: none; /* Hide logo on small screens */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none; /* Initially hidden */
+    background-color: #9747ff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 15px;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+}
+
+
+/* Minimum Screens (340px to 480px) */
+@media screen and (max-width: 480px) {
+  .menu-toggle {
+    font-size: 20px; /* Smaller toggle button */
+    padding: 5px 10px;
+  }
+
+  .nav-links {
+    font-size: 12px;
+  }
+
+  .nav-item {
+    font-size: 12px;
+  }
+
+  .icons i {
+    font-size: 16px; /* Smaller icons */
+  }
+}
+
+/*BUTTON */
+.btn {
+    text-decoration: none;
+    text-align: center;
+    transition: all .5s ease;
+    border: 1.9 solid black;
+
+}
+/*Button */ 
+.btn--action {
+    display: block;
+    width: 133.96px;
+    height: 20px;
+    border-radius: 1.5rem;
+    background-color: #87e432;
+    color: #000;
+    transition: all .5s ease 0s;
+    box-shadow: -4px 5px #000000;
+}
+
+.btn--action:active {
+    box-shadow: -4px 5px #000000;
+    transform: translateY(5px);
+}
+
+
+.white-box-heading {
+    font-weight: bold;
+    padding-bottom: 30.5px;
+    margin: 0;
+    font: 400 23px Vina Sans;
+    color: white;
+    letter-spacing: 1.11px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.7px;
+}
+
+.button-list{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 70px;
+    position: relative;
+    top:120px
+}
+
+/* Contact Details*/ 
+
+.contact {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    gap: 20px;
+    padding: 0px 7%;
+    box-sizing: border-box;
+}
+
+.contact_details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding: 20px;
+}
+
+ h2 {
+    font: 400 48px Tilt Warp;
+    margin-bottom: 20px;
+    color: #9747FF;
+    display: flex;
+    align-items:  center;
+  
+}
+
+
+.name_email {
+    border: none;
+    height: 75px;
+    outline: none;
+    display: flex;
+    padding-left: 40px;
+   
+}
+
+
+.yourthoughts {
+    border: none; /* Removes default border */
+    outline: none; /* Removes focus outline */
+    height: 218px; /* Sets the height */
+    width: 100%; /* Ensures it spans full width */
+    resize: none; /* Disables resizing (prevents scrollbars from resizing) */
+    overflow: hidden; /* Hides any overflow content, preventing scrollbars */
+    padding: 20px; /* Adds padding for inner content */
+    font-size: 16px; /* Ensures consistent font size */
+    line-height: 1.5; /* Adjusts line spacing for better readability */
+    box-sizing: border-box; /* Ensures padding is included in the height */
+}
+
+.contact_details input,
+.contact_details textarea {
+    width: 100%;
+    margin-bottom: 25px;
+
+    
+
+    border-radius: 50px;
+    font: 400 20px Poppins, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.contact_details textarea::placeholder{
+    position: relative;
+    left: 20px;
+}
+
+
+
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+
+/* Large Devices (Laptops and Desktops) */
+@media (max-width: 1024px)  {
+    .image{
+        width: 50%;
+    }
+}
+
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 767px)  {
+    .image{
+        display: none;
+    }
+}
+

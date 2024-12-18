@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="profile.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="AboutUs.html">About</a></li>
+        <li class="nav-item"><a href="index.html#maincontainer">Play</a>        </li>
+        <li class="nav-item logo">
+          <a href="index.html">
+            <img src="assets/Logo.png" alt="Candy Mall Logo" class="logo-image special-logo">
+          </a>
+        </li>
+        <li class="nav-item"><a href="shop.html">Shop</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+        <li class="nav-item icons">
+          <a href="userProfile.html"><img src="assets/sign1.png" alt="User Icon"></a>
+        </li>
+        <li class="nav-item icons">
+          <a href="cart.html"><img src="assets/cart1.png" alt="Cart Icon"></a>
+        </li>
+      </ul>
+    </nav>
+    
+    
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
+
+
+    <div class="container">
+      <div class="sidebar">
+        <h2>User Profile</h2>
+        <ul>
+          <li class="tab active" onclick="showSection('profile-section')">User
+            Info</li>
+          <li class="tab"
+            onclick="showSection('favorites-section')">Favorites</li>
+          <li class="tab" onclick="showSection('points-section')">Points</li>
+        </ul>
+        <a href="index.html" class="back-link">← Back to homepage</a>
+      </div>
+
+      <div class="profile-section" id="profile-section">
+        <div class="profile-header">
+          <img src="assets/image.png" alt="User Photo" class="profile-photo">
+          <div class="profile-info">
+            <h3>Freddy Fazbear</h3>
+            <p>Beirut, Lebanon</p>
+          </div>
+        </div>
+        <form class="profile-form">
+          <div class="form-row">
+            <input type="text" placeholder="Name" name="name">
+            <input type="text" placeholder="Last Name" name="last_name">
+          </div>
+          <div class="form-row">
+            <input type="email" placeholder="Email Address" name="email">
+            <input type="text" placeholder="Phone Number" name="phone">
+          </div>
+          <div class="form-row">
+            <input type="text" placeholder="Address" name="address">
+            <input type="text" placeholder="Postal Code" name="postal_code">
+          </div>
+          <div class="btnd">
+            <button type="submit" class="save-button">Save
+              Changes</button></div>
+        </form>
+      </div>
+
+      <!-- Favorites Section -->
+      <div id="favorites-section" class="profile-section hidden">
+        <div class="profile-header">
+          <img src="assets/image.png" alt="User Photo" class="profile-photo">
+          <div class="profile-info">
+            <h3>Freddy Fazbear</h3>
+            <p>Beirut, Lebanon</p>
+          </div>
+
+        </div>
+
+        <div class="headimg">
+          <img src="assets/12.png" alt>
+        </div>
+
+        <div class="favorites">
+          <div class="candy-product-card">
+            <img src="assets/image_c8ab8ae2.png" alt
+              class="product-image-container" />
+            <div class="mms-price-container">
+              <p class="candy-title-text-style">Bag of M&Ms</p>
+              <p class="mm-price-label">4$</p>
+            </div>
+          </div>
+          <div class="candy-product-card">
+            <img src="assets/image_5fdbbf39.png" alt
+              class="product-image-container" />
+            <div class="mms-price-container">
+              <p class="candy-title-text-style">Bag of M&Ms</p>
+              <p class="mm-price-label">4$</p>
+            </div>
+          </div>
+          <div class="candy-product-card">
+            <img src="assets/22.png" alt
+              class="product-image-container" />
+            <div class="mms-price-container">
+              <p class="candy-title-text-style">Bag of M&Ms</p>
+              <p class="mm-price-label">4$</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+      <!-- Points Section -->
+      <div id="points-section" class="profile-section hidden">
+        <div class="profile-header">
+          <img src="assets/image.png" alt="User Photo" class="profile-photo">
+          <div class="profile-info">
+            <h3>Freddy Fazbear</h3>
+            <p>Beirut, Lebanon</p>
+          </div>
+        </div>
+        <div class="divhe">
+        <h2 class="points-header">Your Points</h2></div>
+        <div class="user-points-display">
+          <p>2000 Pts</p>
+        </div>
+
+        <div class="rewards-section">
+          <h2 class="reh2">Rewards</h2>
+          <div class="reward">
+            <div class="circle"></div>
+            <p>5% Off your next 5 orders</p>
+            <p class="reward-points">25,000 points</p>
+            <div class="circle"></div>
+          </div>
+          <div class="reward">
+            <div class="circle"></div>
+            <p>Free delivery for your next 5 orders</p>
+            <p class="reward-points">25,000 points</p>
+            <div class="circle"></div>
+          </div>
+          <div class="reward">
+            <div class="circle"></div>
+            <p>15% Off your next 5 orders</p>
+            <p class="reward-points">125,000 points</p>
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
